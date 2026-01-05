@@ -1,0 +1,14 @@
+"id","rater","date","episode","event","situation","content","social","init-char","init-no","init-gender","reci-char","reci-no","reci-gender","type","quality","init_char_1","init_no_1","init_gender_1","reci_char_1","reci_no_1","reci_gender_1","init_char_2","init_no_2","init_gender_2","reci_char_2","reci_no_2","reci_gender_2","init_char_3","init_no_3","init_gender_3","reci_char_3","reci_no_3","reci_gender_3","quality_2","wordcount"
+"BT08RL","IN",2023-08-03 19:27:24,1,1,0,"In meinem Traum war ich sehr niedergeschlagen und traurig. Mein Freund hat mich enttÃ¤uscht und ich habe mich nicht geliebt gefÃ¼hlt.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,21
+"BT08RL","IN",2023-08-03 19:27:24,1,1,1,"Unseren Jahrestag hat er vergessen",1,22,1,1,"1",1,NA,2,32,22,1,1,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5
+"BT08RL","IN",2023-08-03 19:27:24,1,1,2,"und mir spÃ¤ter gesagt, dass er aus zeitlichen GrÃ¼nden es nicht geschafft hat, mir ein Geschenk zu besorgen.",1,22,1,1,"1",1,NA,3,26,22,1,1,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,18
+"BT08RL","IN",2023-08-03 19:27:24,1,1,999,"Auch wenn ich auf materielle Dinge in einer Beziehung nicht so viel Wert lege, hÃ¤tte ich mir doch eine Aufmerksamkeit gewÃ¼nscht. Danach bin ich aufgewacht.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,25
+"BT08RL","IN",2023-08-06 06:54:28,1,1,1,"In meinem Traum habe ich zusammen mit meiner Freundin meine Lippen machen lassen.",1,1,1,NA,"232",1,2,4,4,1,1,2,232,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,13
+"BT08RL","IN",2023-08-06 06:54:28,1,1,2,"Wir waren sehr erfreut Ã¼ber das Endergebnis.",1,1,1,NA,"232",1,2,5,31,1,1,2,232,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,7
+"BT08RL","IN",2023-08-10 11:19:41,1,1,1,"Ich und mein Freund waren in einem Wald unterwegs.",1,1,1,NA,"22",1,1,4,4,1,1,2,22,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,9
+"BT08RL","IN",2023-08-10 11:19:41,1,1,2,"Wir wollten in eine HÃ¼tte gehen, um dort ungestÃ¶rt und allein zu sein.",1,1,1,NA,"22",1,1,4,4,1,1,2,22,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,13
+"BT08RL","IN",2023-08-10 11:19:41,1,2,1,"Aufeinmal kam ein Mann in die HÃ¼tte hinein",1,4,1,1,"1, 22",1,1,3,4,4,1,1,NA,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,8
+"BT08RL","IN",2023-08-10 11:19:41,1,2,2,"und bedrohte uns.",1,4,1,1,"1, 22",1,1,3,22,4,1,1,NA,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,3
+"BT08RL","IN",2023-08-10 11:19:41,1,2,3,"Er stach auf mich nieder",1,4,1,1,"1, 22",1,1,3,21,4,1,1,NA,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5
+"BT08RL","IN",2023-08-10 11:19:41,1,2,4,"und plÃ¶tzlich war mein Gesicht voller Blut.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,7
+"BT08RL","IN",2023-08-10 11:19:41,1,2,999,"Dann bin ich aufgewacht.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4

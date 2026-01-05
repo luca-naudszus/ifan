@@ -1,0 +1,133 @@
+2.6559 	ERROR 	Support for the `sounddevice` audio backend is not available this session. Please install `psychopy-sounddevice` and restart the session to enable support.
+9.7011 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [3840, 2160]. Using actual size
+11.0450 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002B4499E1160>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002B4499E1100>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002B4499D7E80>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002B44A972700>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([3840, 2160]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+11.0451 	EXP 	window1: mouseVisible = True
+11.0451 	EXP 	window1: backgroundImage = ''
+11.0452 	EXP 	window1: backgroundFit = 'none'
+11.0453 	EXP 	window1: mouseVisible = False
+11.0453 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+11.0453 	EXP 	window1: recordFrameIntervals = False
+11.2116 	EXP 	window1: recordFrameIntervals = True
+11.3953 	EXP 	Screen (0) actual frame rate measured at 59.94Hz
+11.3953 	EXP 	window1: recordFrameIntervals = False
+13.5662 	EXP 	Created instructs_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='instructs_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.5688 	EXP 	Created instr_done_button = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([0.12941176, 0.86666667, 0.12941176]), fillColorSpace='rgb', fillRGB=array([0.12941176, 0.86666667, 0.12941176]), interpolate=True, lineColor=array([-1.        , -0.21568627, -1.        ]), lineColorSpace='rgb', lineRGB=array([-1.        , -0.21568627, -1.        ]), lineWidth=1, name='instr_done_button', opacity=1.0, ori=0.0, pos=array([ 0. , -0.4]), size=array([0.4, 0.1]), units='height', vertices=ndarray(...), win=Window(...))
+13.6259 	EXP 	Created instr_done_label = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1.        , -0.21568627, -1.        ]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instr_done_label', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='Next...', units='height', win=Window(...), wrapWidth=1)
+13.6261 	EXP 	window1: mouseVisible = True
+13.6500 	EXP 	Created main_ready_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='main_ready_msg', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+13.6519 	EXP 	Created button_L = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([0.12941176, 0.86666667, 0.12941176]), fillColorSpace='rgb', fillRGB=array([0.12941176, 0.86666667, 0.12941176]), interpolate=True, lineColor=array([-1.        , -0.21568627, -1.        ]), lineColorSpace='rgb', lineRGB=array([-1.        , -0.21568627, -1.        ]), lineWidth=1, name='button_L', opacity=1.0, ori=0.0, pos=array([-0.4, -0.3]), size=array([0.4, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+13.6530 	EXP 	Created ready_label_L = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1.        , -0.21568627, -1.        ]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ready_label_L', opacity=1.0, ori=0, pos=array([-0.4, -0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.6547 	EXP 	Created button_R = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([0.12941176, 0.86666667, 0.12941176]), fillColorSpace='rgb', fillRGB=array([0.12941176, 0.86666667, 0.12941176]), interpolate=True, lineColor=array([-1.        , -0.21568627, -1.        ]), lineColorSpace='rgb', lineRGB=array([-1.        , -0.21568627, -1.        ]), lineWidth=1, name='button_R', opacity=1.0, ori=0.0, pos=array([ 0.4, -0.3]), size=array([0.4, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+13.6558 	EXP 	Created ready_label_R = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1.        , -0.21568627, -1.        ]), colorSpace='rgb', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='ready_label_R', opacity=1.0, ori=0, pos=array([ 0.4, -0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.6559 	EXP 	window1: mouseVisible = True
+13.6630 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+13.6641 	EXP 	Created text_stim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_stim', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.6642 	EXP 	window1: mouseVisible = True
+13.6659 	EXP 	Created button_left = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-5.0, fillColor=array([0.12941176, 0.86666667, 0.12941176]), fillColorSpace='rgb', fillRGB=array([0.12941176, 0.86666667, 0.12941176]), interpolate=True, lineColor=array([-1.        , -0.21568627, -1.        ]), lineColorSpace='rgb', lineRGB=array([-1.        , -0.21568627, -1.        ]), lineWidth=1, name='button_left', opacity=1.0, ori=0.0, pos=array([-0.4, -0.3]), size=array([0.4, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+13.6670 	EXP 	Created trial_label_left = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1.        , -0.21568627, -1.        ]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='trial_label_left', opacity=1.0, ori=0, pos=array([-0.4, -0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.6687 	EXP 	Created button_right = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-7.0, fillColor=array([0.12941176, 0.86666667, 0.12941176]), fillColorSpace='rgb', fillRGB=array([0.12941176, 0.86666667, 0.12941176]), interpolate=True, lineColor=array([-1.        , -0.21568627, -1.        ]), lineColorSpace='rgb', lineRGB=array([-1.        , -0.21568627, -1.        ]), lineWidth=1, name='button_right', opacity=1.0, ori=0.0, pos=array([ 0.4, -0.3]), size=array([0.4, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+13.6698 	EXP 	Created trial_label_right = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1.        , -0.21568627, -1.        ]), colorSpace='rgb', contrast=1.0, depth=-8.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='trial_label_right', opacity=1.0, ori=0, pos=array([ 0.4, -0.3]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.6708 	EXP 	Created feedback_msg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='feedback_msg', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+13.7010 	EXP 	Created thanks_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='thanks_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='Ende. \n \nVielen Dank für Deine Teilnahme!', units='height', win=Window(...), wrapWidth=1)
+13.7065 	EXP 	Imported instructs.xlsx as conditions, 2 conditions, 2 params
+13.7069 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+13.7071 	EXP 	New trial (rep=0, index=0): {'pageN': 1, 'instruct_text': "Im Folgenden siehst Du einige Wörter, die Du in Kategorien einordnen sollst. Nutze dafür die Tasten 'A' und 'L'. Die Wörter werden eins nach dem anderen in der Mitte des Bildschirms erscheinen.  \nArbeite so schnell wie Du kannst, mache dabei aber so wenige Fehler wie möglich.\n"}
+13.7863 	EXP 	instructs_text: height = 0.03
+13.7863 	EXP 	instructs_text: height = 0.03
+13.7863 	EXP 	instructs_text: height = 0.03
+13.7863 	EXP 	instructs_text: text = "Im Folgenden siehst Du einige Wörter, die Du in Kategorien einordnen sollst. Nutze dafür die Tasten 'A' und 'L'. Die Wörter werden eins nach dem anderen in der Mitte des Bildschirms erscheinen.  \nArbeite so schnell wie Du kannst, mache dabei aber so wenige Fehler wie möglich.\n"
+13.7863 	EXP 	instructs_text: autoDraw = True
+13.7863 	EXP 	instr_done_button: autoDraw = True
+13.7863 	EXP 	instr_done_label: autoDraw = True
+15.9585 	DATA 	Mouse: Left button down, pos=(1931,171)
+15.9738 	EXP 	New trial (rep=0, index=1): {'pageN': 2, 'instruct_text': "Beachte: \n \n1) Vor jedem Durchgang wird unten auf dem Bildschirm angezeigt, welche Kategorie zu welcher Taste gehört. Drücke die 'A'-Taste für Wörter, die zur Kategorie, die auf der linken Seite des Bildschirms angezeigt wird, gehören. Drücke die 'L'-Taste für Wörter, die zur Kategorie, die auf der rechten Seite des Bildschirms angezeigt wird, gehören. \n \n2) Jedes Wort gehört genau einer Kategorie an. Wenn Du einen Fehler machst, erscheint ein X auf dem Bildschirm. \n \n3) Halte Deine Finger stets auf den Tasten 'A' und 'L', um schnellstmöglich zu reagieren. \n \n4) Wenn Du langsam arbeitest, ist das Testergebnis ungültig. Versuch deswegen bitte, so schnell wie möglich zu sein.\n"}
+16.0219 	EXP 	instructs_text: autoDraw = False
+16.0219 	EXP 	instr_done_button: autoDraw = False
+16.0219 	EXP 	instr_done_label: autoDraw = False
+16.0219 	EXP 	instructs_text: height = 0.03
+16.0219 	EXP 	instructs_text: height = 0.03
+16.0219 	EXP 	instructs_text: height = 0.03
+16.0219 	EXP 	instructs_text: text = "Beachte: \n \n1) Vor jedem Durchgang wird unten auf dem Bildschirm angezeigt, welche Kategorie zu welcher Taste gehört. Drücke die 'A'-Taste für Wörter, die zur Kategorie, die auf der linken Seite des Bildschirms angezeigt wird, gehören. Drücke die 'L'-Taste für Wörter, die zur Kategorie, die auf der rechten Seite des Bildschirms angezeigt wird, gehören. \n \n2) Jedes Wort gehört genau einer Kategorie an. Wenn Du einen Fehler machst, erscheint ein X auf dem Bildschirm. \n \n3) Halte Deine Finger stets auf den Tasten 'A' und 'L', um schnellstmöglich zu reagieren. \n \n4) Wenn Du langsam arbeitest, ist das Testergebnis ungültig. Versuch deswegen bitte, so schnell wie möglich zu sein.\n"
+16.0219 	EXP 	instructs_text: autoDraw = True
+16.0219 	EXP 	instr_done_button: autoDraw = True
+16.0219 	EXP 	instr_done_label: autoDraw = True
+16.0228 	DATA 	Mouse:  Left button up, pos=(1931,171)
+16.9258 	DATA 	Mouse: Left button down, pos=(1931,171)
+16.9460 	EXP 	Imported blocks_order1.xlsx as conditions, 7 conditions, 3 params
+16.9463 	EXP 	Created sequence: sequential, trialTypes=7, nReps=1, seed=None
+16.9465 	EXP 	New trial (rep=0, index=0): {'conds_file': 'pos_neg_train.xlsx', 'label_left': 'A = \nPositiv', 'label_right': 'L = \nNegativ'}
+16.9812 	EXP 	instructs_text: autoDraw = False
+16.9812 	EXP 	instr_done_button: autoDraw = False
+16.9812 	EXP 	instr_done_label: autoDraw = False
+16.9812 	EXP 	ready_label_L: height = 0.05
+16.9812 	EXP 	ready_label_L: height = 0.05
+16.9812 	EXP 	ready_label_L: height = 0.05
+16.9812 	EXP 	ready_label_L: text = 'A = \nPositiv'
+16.9812 	EXP 	ready_label_R: height = 0.05
+16.9812 	EXP 	ready_label_R: height = 0.05
+16.9812 	EXP 	ready_label_R: height = 0.05
+16.9812 	EXP 	ready_label_R: text = 'L = \nNegativ'
+16.9812 	EXP 	main_ready_msg: autoDraw = True
+16.9812 	EXP 	button_L: autoDraw = True
+16.9812 	EXP 	ready_label_L: autoDraw = True
+16.9812 	EXP 	button_R: autoDraw = True
+16.9812 	EXP 	ready_label_R: autoDraw = True
+17.0181 	DATA 	Mouse:  Left button up, pos=(1931,171)
+18.8535 	DATA 	Keypress: space
+18.8777 	EXP 	Imported pos_neg_train.xlsx as conditions, 24 conditions, 3 params
+18.8784 	EXP 	Created sequence: random, trialTypes=24, nReps=1, seed=None
+18.8786 	EXP 	New trial (rep=0, index=0): {'stimImage': 'stimuli/blank.png', 'stimWord': 'Glück', 'CorrAns': 'a'}
+18.8907 	EXP 	main_ready_msg: autoDraw = False
+18.8907 	EXP 	button_L: autoDraw = False
+18.8907 	EXP 	ready_label_L: autoDraw = False
+18.8907 	EXP 	button_R: autoDraw = False
+18.8907 	EXP 	ready_label_R: autoDraw = False
+18.8907 	EXP 	text_stim: height = 0.05
+18.8907 	EXP 	text_stim: height = 0.05
+18.8907 	EXP 	text_stim: height = 0.05
+18.8907 	EXP 	text_stim: text = 'Glück'
+18.8907 	EXP 	trial_label_left: height = 0.05
+18.8907 	EXP 	trial_label_left: height = 0.05
+18.8907 	EXP 	trial_label_left: height = 0.05
+18.8907 	EXP 	trial_label_left: text = 'A = \nPositiv'
+18.8907 	EXP 	trial_label_right: height = 0.05
+18.8907 	EXP 	trial_label_right: height = 0.05
+18.8907 	EXP 	trial_label_right: height = 0.05
+18.8907 	EXP 	trial_label_right: text = 'L = \nNegativ'
+18.8907 	EXP 	fixation: autoDraw = True
+19.1243 	EXP 	fixation: autoDraw = False
+19.1243 	EXP 	text_stim: autoDraw = True
+19.1243 	EXP 	button_left: autoDraw = True
+19.1243 	EXP 	trial_label_left: autoDraw = True
+19.1243 	EXP 	button_right: autoDraw = True
+19.1243 	EXP 	trial_label_right: autoDraw = True
+20.8100 	DATA 	Keypress: a
+20.8262 	EXP 	fixation: autoDraw = False
+20.8262 	EXP 	text_stim: autoDraw = False
+20.8262 	EXP 	button_left: autoDraw = False
+20.8262 	EXP 	trial_label_left: autoDraw = False
+20.8262 	EXP 	button_right: autoDraw = False
+20.8262 	EXP 	trial_label_right: autoDraw = False
+20.8262 	EXP 	feedback_msg: height = 0.1
+20.8262 	EXP 	feedback_msg: height = 0.1
+20.8262 	EXP 	feedback_msg: height = 0.1
+20.8262 	EXP 	feedback_msg: text = '+'
+20.8262 	EXP 	feedback_msg: autoDraw = True
+21.8110 	EXP 	New trial (rep=0, index=1): {'stimImage': 'stimuli/blank.png', 'stimWord': 'Freude', 'CorrAns': 'a'}
+21.8772 	EXP 	feedback_msg: autoDraw = False
+21.8772 	EXP 	feedback_msg: autoDraw = False
+21.8772 	EXP 	text_stim: height = 0.05
+21.8772 	EXP 	text_stim: height = 0.05
+21.8772 	EXP 	text_stim: height = 0.05
+21.8772 	EXP 	text_stim: text = 'Freude'
+21.8772 	EXP 	trial_label_left: text = 'A = \nPositiv'
+21.8772 	EXP 	trial_label_right: text = 'L = \nNegativ'
+21.8772 	EXP 	fixation: autoDraw = True
+22.0607 	EXP 	fixation: autoDraw = False
+22.0607 	EXP 	text_stim: autoDraw = True
+22.0607 	EXP 	button_left: autoDraw = True
+22.0607 	EXP 	trial_label_left: autoDraw = True
+22.0607 	EXP 	button_right: autoDraw = True
+22.0607 	EXP 	trial_label_right: autoDraw = True
+22.5118 	DATA 	Keypress: escape
+23.1075 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,25 @@
+"id","rater","date","episode","event","situation","content","social","init-char","init-no","init-gender","reci-char","reci-no","reci-gender","type","quality","init_char_1","init_no_1","init_gender_1","reci_char_1","reci_no_1","reci_gender_1","init_char_2","init_no_2","init_gender_2","reci_char_2","reci_no_2","reci_gender_2","init_char_3","init_no_3","init_gender_3","reci_char_3","reci_no_3","reci_gender_3","quality_2","wordcount"
+"SB02CR","IN","2023-07-17 06:41:15",1,1,1,"Ich musste eine Klausur schreiben, aber habe nicht gelernt und hatte deshalb Angst vor der Klausur.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,16
+"SB02CR","IN","2023-07-17 06:41:15",1,2,1,"Dann habe ich mit meinem Freund Nudeln gekocht.",1,22,1,1,1,1,NA,4,4,22,1,1,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,8
+"SB02CR","IN","2023-07-18 06:10:32",1,1,1,"Ich habe geträumt, dass ich einen riesigen Blumenstrauß hatte.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,9
+"SB02CR","IN","2023-07-18 06:10:32",1,1,2,"Aber irgendwie war es da gruselig wo man den kaufen kann.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,11
+"SB02CR","IN","2023-07-18 06:10:32",1,1,3,"Und ich wollte mit meinen Freunden auf ein Festival aber die haben getrödelt …",1,231,2,4,1,1,NA,1,NA,231,2,4,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,14
+"SB02CR","IN","2023-07-18 06:10:32",1,1,4,"… und dann hab ich den act den ich sehen wollte verpasst.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,12
+"SB02CR","IN","2023-07-20 06:49:38",1,1,1,"Ich war beim Schönheitssalon weil ich mich über botox Behandlungen informieren wollte.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,12
+"SB02CR","IN","2023-07-20 06:49:38",1,1,2,"Da war ein Typ der mich einfach gefilmt hat …",1,4,1,1,1,1,NA,3,2,4,1,1,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,10
+"SB02CR","IN","2023-07-20 06:49:38",1,1,3,"… und als er das nicht löschen wollte habe ich seine Kamera kaputt gemacht.",1,1,1,NA,4,1,1,3,21,1,1,2,4,1,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,14
+"SB02CR","IN","2023-07-20 06:49:38",1,2,1,"Dann hat der Chirurg mir einen Karton mit einer Schlange mit nach Hause gegeben …",1,3,1,1,1,1,NA,3,14,3,1,1,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,15
+"SB02CR","IN","2023-07-20 06:49:38",1,2,2,"… und die ist abgehauen …",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6
+"SB02CR","IN","2023-07-20 06:49:38",1,2,3,"… und ich musste sie einfangen",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6
+"SB02CR","IN","2023-07-22 07:47:25",1,1,1,"Ich war mit meiner Familie in Amsterdam und da war ein Lana del rey Café und da waren wir drin.",1,21,2,4,1,1,NA,4,4,21,2,4,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,20
+"SB02CR","IN","2023-07-25 06:10:26",1,1,1,"Ich war auf einem großen Feld mit Bergen und habe mir den Sonnenuntergang angeguckt.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,14
+"SB02CR","IN","2023-07-25 06:10:26",1,2,1,"Danach war ich da nochmal und andere Menschen waren auch da mit denen ich geredet habe.",1,5,2,4,1,1,NA,5,4,5,2,4,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,16
+"SB02CR","IN","2023-07-26 05:52:27",1,1,1,"Ich habe Klausur geschrieben, aber konnte irgendwie alle fragen nicht …",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,11
+"SB02CR","IN","2023-07-26 05:52:27",1,1,2,"… und habe dann Panik bekommen und mich geärgert.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,9
+"SB02CR","IN","2023-07-27 06:57:15",1,1,1,"Ich wurde auf einer langen Feldstraße von einem Mann verfolgt …",1,4,1,1,1,1,NA,3,21,4,1,1,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,11
+"SB02CR","IN","2023-07-27 06:57:15",1,1,2,"… aber da war noch ein anderer Mann und der meinte dann dass ich bei ihm bleiben kann.",1,4,1,1,1,1,NA,3,14,4,1,1,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,18
+"SB02CR","IN","2023-07-27 06:57:15",1,1,3,"Der andere hat uns dann noch bis zum Ende vom Weg verfolgt.",1,4,1,1,4.1,1.1,1,3,21,4,1,1,4,1,1,NA,NA,NA,1,1,2,NA,NA,NA,NA,NA,NA,NA,12
+"SB02CR","IN","2023-07-29 09:08:57",1,1,1,"Ich war an einer Schule in einem Berg ein gesperrt und alle sollten da ein halbes Jahr bleiben und da war alles aus so Sofa Stoff. Ich konnte aber nicht weggehen weil ich sonst durch mein Studium fallen würde.",0,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,39
+"SB02CR","IN","2023-07-19 06:49:01",1,1,1,"Ich war in einem Garten mit Freunden …",1,231,2,4,1,1,NA,4,4,231,2,4,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,8
+"SB02CR","IN","2023-07-19 06:49:01",1,1,2,"… und dann kann jemand und ich musste weglaufen.",1,5,1,4,1,1,NA,2,25,5,1,4,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,9
+"SB02CR","IN","2023-07-19 06:49:01",1,2,1,"Und dann war ich in Cartier mit einer Person, die mit einfach alles gekauft hat.",1,5,1,4,1,1,NA,3,14,5,1,4,1,1,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,15
