@@ -1,0 +1,192 @@
+---
+title: "Personalisierte Auswertung der Traumstudie"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# initialise
+rm(list=ls())
+setwd("C://Users//lanau//sciebo3//Imaginary Friends at Night//Traumstudie_2023")
+current_vpncode <- 'HI05MR'
+
+# load packages
+library(ggplot2)
+library(ggpubr)
+library(psych)
+library(scales)
+library(tidyverse)
+
+# load data
+df.sample <- as_tibble(read.csv(list.files(path = 'data/2_preprocessed-data', pattern = 'demoAll', full.names = T)))
+df.all <- as_tibble(read.csv(list.files(path = 'data/4_feedback/data', pattern = 'all', full.names = T)))
+df.pnorm <- as_tibble(read.csv(list.files(path = 'data/4_feedback/data', pattern = 'pnorm', full.names = T)))
+df.ema <- as_tibble(read.csv(list.files(path = 'data/2_preprocessed-data', pattern = 'ema.csv', full.names = T)))
+df.ema <- df.ema[df.ema$vpncode == current_vpncode,]
+df.ema$scheduledTime = as.POSIXct(strptime(df.ema$scheduledTime, "%Y-%m-%d %H:%M:%OS"))
+
+# custom functions
+report <- function(col){
+  foo = which(colnames(df.pnorm) == col)
+  value = as.numeric(round(df.pnorm[df.pnorm$vpncode == current_vpncode, foo]*100,1))
+  return(value)
+}
+report_raw <- function(col){
+  foo = which(colnames(df.all) == col)
+  value = as.numeric(round(df.all[df.all$vpncode == current_vpncode, foo],1))
+  return(value)
+}
+normalplot <- function(col, xlabel, lim_input1, lim_input2){
+  foo = which(colnames(df.all) == col)
+  xint = as.numeric(df.all[df.all$vpncode == current_vpncode, foo])
+  if (hasArg(lim_input1)){
+    obj <- ggplot(df.all) + 
+      geom_density(mapping = aes_string(x = col), fill = "grey") + 
+      geom_segment(aes(x = xint, y = 0, xend = xint, yend = 1, color = "red", size = 0.25), show.legend = F) + 
+      geom_label(aes(label = current_vpncode, x = xint, y = 0.25)) + 
+      xlab(xlabel) + 
+      xlim(lim_input1, lim_input2) +
+      ylab("Dichte") + 
+      ylim(0, 1) +
+      ggtitle(xlabel) + 
+      theme_classic()
+  } else {
+    obj <- ggplot(df.all) + 
+      geom_density(mapping = aes_string(x = col), fill = "grey") + 
+      geom_segment(aes(x = xint, y = 0, xend = xint, yend = 1, color = "red", size = 0.25), show.legend = F) + 
+      geom_label(aes(label = current_vpncode, x = xint, y = 0.25)) + 
+      xlab(xlabel)  +
+      ylab("Dichte") + 
+      ylim(0, 1) +
+      ggtitle(xlabel) + 
+      theme_classic()
+  }
+  return(obj)
+}
+timeplot <- function(col, xlabel, ylim1, ylim2){
+  foo = which(colnames(df.ema) == col)
+  xint = as.numeric(unlist(df.ema[df.ema$vpncode == current_vpncode, foo]))
+  obj <- ggplot(df.ema) +
+    geom_step(aes(x = scheduledTime, y = xint, color = "red"), show.legend = F) + 
+    xlab("Zeit") + 
+    scale_x_datetime(breaks = date_breaks("1 days"), labels = date_format(format = "%d.%m.")) + 
+    ylab(xlabel) + 
+    ylim(ylim1, ylim2) +
+    theme_classic()
+  return(obj)
+}
+```
+
+### Einleitung
+
+Liebe Teilnehmerin, 
+
+Wir bedanken uns noch einmal herzlich bei Dir für Deine Teilnahme an der Traumstudie. Wir haben auch dank Dir eine riesige Anzahl an Traumberichten von einer ebenso großen Gruppe an Teilnehmenden gesammelt und können mit diesen Daten verschiedenste Hypothesen zum Zusammenhang zwischen unserer Persönlichkeit und unserem Trauminhalt sowie zur Frage, warum wir überhaupt träumen, untersuchen. 
+
+Wie versprochen erhältst Du als Dank diese Auswertung Deiner persönlichen Ergebnisse. Dabei handelt es sich sowohl um Deine Ergebnisse in den verwendeten Persönlichkeitstests und -fragebögen, als auch um eine Darstellung Deiner Angaben im Ambulatory Assessment - also in den mobilen Abfragen, die du alle zwei Stunden beantwortet hast - und um eine Darstellung verschiedener Variablen Deines Trauminhalts. Dabei ist von uns leider keine Traumdeutung zu erwarten: warum wir träumen und wie Träume mit unserem Wachleben zusammenhängen, ist noch viel zu schlecht untersucht. Wie Du Dir sicher vorstellen kannst, gibt es außerdem eine riesige Anzahl an Elementen des Trauminhalts, die man untersuchen könnte. In dieser Studie fokussieren wir uns auf soziale Inhalte des Traums. Wir melden Dir also Angaben zu sozialen Inhalten und Charakteren Deiner Träume zurück und wie häufig diese im Vergleich zu anderen Menschen vorkommen. In späteren Untersuchungen beschäftigen wir uns auch mit anderen Aspekten. Du wirst über Deine persönlichen Ergebnisse in diesen Aspekten dann selbstverständlich ebenfalls informiert. 
+
+Wir berichten Deine Ergebnisse an vielen Stellen in Form von Prozenträngen. Diese Angabe ist einfach und intuitiv zu verstehen: die Zahl gibt an, wie viele Menschen in der Stichprobe einen niedrigeren Wert als Du erreichten. Zum Beispiel beträgt Dein Prozentrang in der Persönlichkeitseigenschaft *Gewissenhaftigkeit* (die wir weiter unten erklären) `r report("cons")`. Das heißt, dass `r report("cons")`% aller Studienteilnehmenden weniger gewissenhaft sind als Du (und dementsprechend `r 100 - report("cons")`% aller Studienteilnehmenden gewissenhafter als Du). 
+
+Deshalb ist es wichtig, zu wissen, wer diese anderen Studienteilnehmenden sind, mit denen Du verglichen wirst. Im Folgenden starten wir also mit einer kleinen Beschreibung der Stichprobe. 
+
+Außerdem solltest Du daran denken, dass viele der Persönlichkeitseigenschaften mittels Fragebögen mit Selbstbericht erhoben wurden. Zwar haben solche Selbstberichte einige gewichtige Vorteile - schließlich gibt es niemanden, der Dich so umfassend kennt wie Du Dich selbst, insbesondere Deine Emotionen und Gedanken. Sie haben allerdings auch einige Nachteile: zum Beispiel tendieren manche Menschen dazu, sich besonders positiv darzustellen (Soziale Erwünschtheit) oder allen möglichen Aussagen zuzustimmen (Akquieszenz). Auch ist umstritten, wie gut Menschen ihr eigenes Verhalten überhaupt einschätzen können. 
+
+### Beschreibung der Stichprobe
+
+Insgesamt haben `r dim(df.sample)[1]` Personen an der Traumstudie teilgenommen. Sie waren zwischen `r min(df.sample$age)` und `r max(df.sample$age)` Jahre alt, im Durchschnitt `r round(mean(df.sample$age),2)` (*SD* = `r round(sd(df.sample$age),2)`) Jahre. `r table(df.sample$gender)[2]` Personen sind weiblich, `r table(df.sample$gender)[1]` männlich und `r table(df.sample$gender)[3]` divers. 
+
+Der höchste Schulabschluss von `r dim(df.sample[df.sample$education == 4,])[1]` Teilnehmenden ist die Allgemeine Hochschulreife oder ein äquivalenter Abschluss. `r dim(df.sample[df.sample$education == 6,])[1]` Teilnehmende besitzen einen Volks- oder Hauptschulabschluss, `r dim(df.sample[df.sample$education == 3,])[1]` Teilnehmende besitzen die Mittlere Reife bzw. den Realschulabschluss. 
+
+Von den Teilnehmenden sind `r dim(df.sample[df.sample$occupation == 1 | df.sample$occupation > 6,])[1]` Studierende, `r dim(df.sample[df.sample$occupation == 3,])[1]` in Ausbildung, `r dim(df.sample[df.sample$occupation == 2,])[1]` berufstätig, `r dim(df.sample[df.sample$occupation == 4,])[1]` im Ruhestand, `r dim(df.sample[df.sample$occupation == 5,])[1]` erwerbslos oder arbeitssuchend und `r dim(df.sample[df.sample$occupation == 6,])[1]` geben eine sonstige berufliche Tätigkeit an. 
+
+Angaben zum Wohnort folgen. 
+
+### Tests und Fragebögen
+
+In der Abschlusserhebung haben wir einige Persönlichkeitsfragebögen, die auf Selbstberichten basieren, sowie zwei Persönlichkeitstests eingesetzt. Diese Verfahren messen die folgenden Persönlichkeitseigenschaften: Extraversion, Neurotizismus, Verträglichkeit, Gewissenhaftigkeit, Offenheit für Erfahrungen, Empathie und Selbstwert. Zudem haben wir Einsamkeit und sozialen Einschluss erhoben. 
+
+**Extraversion**. 
+Extraversion ist eine der Persönlichkeitseigenschaften, die als die "Big Five" bezeichnet werden. Die Big Five erklären viele Unterschiede zwischen Menschen und sind über verschiedene Altersgruppen und Kulturen hinweg stabil auffindbar. Wir haben sie mit dem NEO-Fünffaktoreninventar (NEO-FFI; ???) erhoben. Extraversion beschreibt die Tendenz dazu, gerne unter anderen Menschen zu sein, Reize aufzusuchen und positive Emotionen zu erleben. Extravertierte Menschen gelten als aktiv, gesprächig, optimistisch, Introvertierte hingegen als reserviert, nüchtern, aufgabenfokussiert und ruhig. Dein Wert in Extraversion liegt im Prozentrang `r report("xtra")`. 
+
+**Neurotizismus**. 
+Neurotizismus zählt ebenfalls zu den Big Five und wurde in der Traumstudie mit dem NEO-FFI erhoben. Neurotizismus wird auch emotionale Labilität genannt und beschreibt schlechte psychische Anpassung und die Tendenz dazu, negative Emotionen zu erleben. Neurotizistische Menschen werden als sorgenvoll, nervös, emotional und unsicher beschrieben, emotional Stabile hingegen als ruhig, entspannt, unemotional, sicher und zufrieden. Dein Wert in Neurotizismus liegt im Prozentrang `r report("neur")`. 
+
+**Verträglichkeit**. 
+Verträglichkeit ist eine weitere Eigenschaft der Big Five und wurde ebenfalls mit dem NEO-FFI erhoben. Verträglichkeit bezieht sich auf Harmoniestreben und die Vermeidung von Konflikten. Verträgliche Menschen werden auch als weichherzig, gut, vertrauensvoll, hilfsbereit, nachsichtig und unkompliziert beschrieben, unverträgliche Menschen hingegen als zynisch, unhöflich, argwöhnisch, unkooperativ, rachsüchtig, reizbar oder manipulativ. Dein Wert in Verträglichkeit liegt im Prozentrang `r report("agre")`.
+
+**Gewissenhaftigkeit**. 
+Gewissenhaftigkeit ist eine weitere Eigenschaft der Big Five und wurde ebenfalls mit dem NEO-FFI erhoben. Gewissenhaftigkeit beschreibt, wie Personen mit Aufgaben umgehen. Gewissenhafte Menschen sind organisiert, zuverlässig, strebsam, diszipliniert und ausdauernd, wenig gewissenhafte Menschen hingegen ziellos, unzuverlässig, achtlos, nachlässig und willensschwach. Dein Wert in Gewissenhaftigkeit liegt im Prozentrang `r report("cons")`. 
+
+**Offenheit für Erfahrungen**. 
+Offenheit für Erfahrungen ist die fünfte Eigenschaft der Big Five und wurde dementsprechend mit dem NEO-FFI erhoben. Offenheit beschreibt die Tendenz, neue Erfahrungen zu suchen und positiv zu finden sowie Ungewohntes auszuhalten und auszuprobieren. Offene Menschen sind neugierig, kreativ, eigenständig, fantasievoll und haben breite Interessen. Weniger offene Menschen sind konventionell, wenig künstlerisch und haben ein enges Interessengebiet. Dein Wert in Offenheit für Erfahrungen liegt im Prozentrang `r report("open")`. 
+
+```{r big five, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
+plot1 <- normalplot("xtra", "Extraversion", 1, 5)
+plot2 <- normalplot("neur", "Neurotizismus", 1, 5)
+plot3 <- normalplot("agre", "Verträglichkeit", 1, 5)
+plot4 <- normalplot("cons", "Gewissenhaftigkeit", 1, 5)
+plot5 <- normalplot("open", "Offenheit für Erfahrungen", 1, 5)
+ggarrange(plot1, plot2, plot3, plot4, plot5, ncol = 2)
+```
+
+**Empathie**. Wir haben Empathie mit dem Saarbrücker Persönlichkeitsfragebogen (SPF; Davis et al., 1980; Paulus, 2009) erhoben. Er unterscheidet vier verschiedene Facetten von Empathie. 
+
+*Empathic Concern* ist die Tendenz zu empathischen, fremdorientierten Reaktionen auf negative Emotionen anderer, z.B: "Ich empfinde warmherzige Gefühle für Leute, denen es weniger gut geht als mir". Dein Wert in Empathic Concern ist im Prozentrang `r report("iri_ec")`. 
+
+Bei *Perspective Taking* handelt es sich im Gegensatz dazu eher um einen kognitiven Aspekt von Empathie: die Tendenz, die Perspektive anderer zu übernehmen und sich in die Lage anderer hineinzuversetzen, z.B. "Wenn mir das Verhalten eines anderen komisch vorkommt, versuche ich mich für eine Weile in seine Lage zu versetzen." Dein Wert in Perspective Taking ist im Prozentrang `r report("iri_pt")`. 
+
+*Fantasy* ist die Tendenz, die Perspektive fiktionaler Charaktere aus Büchern, Filmen oder ähnlichem zu übernehmen und sich in ihre Gefühlswelt hineinzuversetzen, z.B. "Wenn ich eine interessante Geschichte oder ein gutes Buch lese, versuche ich mir vorzustellen, wie ich mich fühlen würde, wenn mir die Ereignisse passieren würden". Dein Wert in Fantasy ist im Prozentrang `r report("iri_f")`. 
+
+Schließlich ist *Personal Distress* die Tendenz dazu, negative und auf sich selbst fokussierte Emotionen im Umgang mit den Emotionen anderer zu erleben, z.B. "In einer gespannten emotionalen Situation zu sein, beängstigt mich." Dein Wert in Personal Distress ist im Prozentrang `r report("iri_pd")`.
+
+Beachte bitte, dass diese Angaben nichts über Fähigkeiten aussagen können, weil es sich um Selbstberichte handelt. 
+
+```{r empathy, echo=FALSE, warning=FALSE, message=FALSE, results=FALSE}
+plot1 <- normalplot("iri_ec", "Empathic Concern")
+plot2 <- normalplot("iri_pt", "Perspective Taking")
+plot3 <- normalplot("iri_f", "Fantasy")
+plot4 <- normalplot("iri_pd", "Personal Distress")
+ggarrange(plot1, plot2, plot3, plot4, ncol = 2)
+```
+
+**Selbstwert**. 
+Beim Selbstwert handelt es sich um die allgemeine Bewertung der eigenen Person (QUELLE?). Er spielt eine zentrale Rolle in unserer Forschung, weshalb wir ihn auf verschiedene Arten und Weisen gemessen haben. Zum einen haben wir die Rosenberg Self-Esteem Scale eingesetzt, einen Fragebogen, der den sogenannten expliziten Selbstwert misst. Das ist derjenige Selbstwert, über den wir bewusst Auskunft geben können. 
+
+Verschiedene Modelle postulieren außerdem die Existenz eines impliziten Selbstwerts, der auf unbewussten Assoziationen beruht und den wir nicht berichten können. Zu seiner Messung werden Persönlichkeitstests eingesetzt, bei denen den Teilnehmenden nicht offensichtlich ist, welches Merkmal erhoben wird. In dieser Studie wurden der Selbstwert-Implizite Assoziationstest sowie der Name Letter Test verwendet, die allerdings beide umstritten sind und teils stark abweichende Ergebnisse liefern können. 
+
+Dein expliziter Selbstwert (Rosenberg Self-Esteem Scale) liegt im Prozentrang `r report("rses")`. 
+Der Prozentrang Deines impliziten Selbstwerts liegt bei `r report("dscore")` (Selbstwert-Impliziter Assoziationstest) bzw. `r report("nlt")` (Name Letter Test). 
+
+```{r self-esteem, echo=FALSE, warning=FALSE, message=FALSE, results = FALSE}
+plot1 <- normalplot("rses", "Rosenberg Self-Esteem Scale", 1, 7)
+plot3 <- normalplot("dscore", "Selbstwert-Impliziter Assoziationstest")
+plot4 <- normalplot("nlt", "Name Letter Test")
+ggarrange(plot1, plot2, plot3, plot4, ncol = 2)
+```
+
+### Ambulatory Assessment
+
+Unter Ambulatory Assessment wird die Datenerhebung im Alltag der untersuchten Person verstanden. Wir haben mehrfach am Tag danach gefragt, wie viel Zeit du in den letzten zwei Stunden in der Umgebung anderer Menschen verbracht hast, wie viel Zeit du in Interaktionen mit anderen Menschen verbracht hast und wie ein- oder ausgeschlossen du dich gefühlt hast. Auch diese Daten können natürlich in den Vergleich mit anderen Teilnehmenden gebracht werden. 
+
+Du hast insgesamt angegeben, `r report_raw("socSit")` % der Zeit in der Umgebung anderer Menschen verbracht zu haben. Das entspricht dem Prozentrang `r report("socSit")`. 
+
+Du hast insgesamt angegeben, `r report_raw("socInt")` % der Zeit in der Interaktion mit anderen Menschen verbracht zu haben. Das entspricht dem Prozentrang `r report("socInt")`. 
+
+Uns hat außerdem besonders dein Verlauf über die Zeit hinweg interessiert. Beide Kurven sind in der folgenden Abbildung dargestellt: 
+
+```{r EMA curve, echo=FALSE, warning=FALSE, message=FALSE}
+plot(timeplot("socialSituations", "Anteil sozialer Situationen", 0, 100))
+plot(timeplot("socialInteractions", "Anteil sozialer Interaktionen", 0, 100))
+```
+
+Dein Wert im Ausmaß, in dem du dich ein- oder ausgeschlossen gefühlt hast, liegt im Prozentrang `r report("excl")`. Dieser Anteil an Menschen hat sich über den Studienzeitraum hinweg stärker ausgeschlossen gefühlt. Dieses Gefühl ist laut der Soziometertheorie (Leary et al., 1995) eng mit dem Selbstwert verknüpft - eine Hypothese, die ebenfalls unserer Arbeit zugrunde liegt. Wie sich dein Selbstwertgefühl und das Ausmaß, in dem du dich ein- oder ausgeschlossen gefühlt hast, über den Studienzeitraum hinweg entwickelt haben, kannst du der folgenden Abbildung entnehmen: 
+
+```{r self-esteem curve, echo=FALSE, warning=FALSE, message=FALSE}
+plot(timeplot("rses_total", "Selbstwert", 1, 7))
+plot(timeplot("exclusion", "Gefühl, sozial ein- vs. ausgeschlossen zu sein", 1, 7))
+```
+
+Schließlich können wir dir außerdem zurückmelden, wie hoch deine Compliance, also deine Teilnahme an der Studie, im Vergleich zu anderen Teilnehmenden war. Du hast `r report_raw("compliance")*100`% der Fragen über insgesamt `r round(report_raw("duration"), 0)` Tage hinweg beantwortet. Das entspricht dem Prozentrang `r report("compliance")`. 
+
+### Analyse der Traumberichte
